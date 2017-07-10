@@ -1,9 +1,11 @@
+# Alejandro Ledesma - React native Proyect
+
 ## Get Started
 
 1. Clone the project
 
 ```
-git clone git@github.com:dabit3/react-native-hackathon-starter.git
+git clone https://github.com/alejandroledesma/alejandroledesma-react-native.git
 ```
 
 2. Install dependencies
