@@ -4,11 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Base.lproj/LaunchScreen.nib</key>
+		<key>AppIcon60x60@3x.png</key>
+		<data>
+		GF4dEFOsUlDjSTS0KzTIAeE/9WQ=
+		</data>
+		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1HVcRFmOG3d4YHRo6/AFgC8zj5k=
+			oP0yHzFb8izK6Cwd0P9PVsQJQOY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n2t8gsDpfE6XkhG31p7IQJRxTxU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			et+jUTTbFRM9hN/5bDkCfKTrAFs=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -224,7 +246,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LK87jnnnMS41jhvsEqVxK9EhrQM=
+		I8TJQbcFb+mgtxcQ9EOhvyEz+To=
 		</data>
 		<key>Ionicons.ttf</key>
 		<data>
@@ -261,15 +283,52 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Base.lproj/LaunchScreen.nib</key>
+		<key>AppIcon60x60@3x.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1HVcRFmOG3d4YHRo6/AFgC8zj5k=
+			GF4dEFOsUlDjSTS0KzTIAeE/9WQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			mohPVqThZs8CehAMi3eHHCtxeSzWNyZEh962LgH5vJk=
+			v8thMs2aL62icjstES+ClRBHmGLB3tIz+1O7pCoEa5Q=
+			</data>
+		</dict>
+		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			oP0yHzFb8izK6Cwd0P9PVsQJQOY=
+			</data>
+			<key>hash2</key>
+			<data>
+			g/rWoDxu1cHYdaLREluRpiF63G9C8c/8G0RDAe7WAb8=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			n2t8gsDpfE6XkhG31p7IQJRxTxU=
+			</data>
+			<key>hash2</key>
+			<data>
+			HyVdXMU7Ux4/KalAao30mpWOK/lEPT4gvYN09wf31cg=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			et+jUTTbFRM9hN/5bDkCfKTrAFs=
+			</data>
+			<key>hash2</key>
+			<data>
+			yYCTsiOGSItkSgG72FG4aAa3U6GhGOhcnCk/92Xj9HQ=
 			</data>
 			<key>optional</key>
 			<true/>

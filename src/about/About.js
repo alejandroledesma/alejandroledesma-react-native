@@ -18,52 +18,36 @@ import {
 } from 'react-native-elements'
 
 import * as RNElements from 'react-native-elements'
-
 let styles = {}
-
-const users = [
-  {
-    name: 'brynn',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
-  },
-  {
-    name: 'thot leader',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/evagiselle/128.jpg'
-  },
-  {
-    name: 'jsa',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg'
-  },
-  {
-    name: 'talhaconcepts',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/talhaconcepts/128.jpg'
-  },
-  {
-    name: 'andy vitale',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/andyvitale/128.jpg'
-  },
-  {
-    name: 'katy friedson',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg'
-  }
-]
 
 class About extends Component {
   constructor () {
     super()
     this.state = {
       selectedIndex: 0,
-      value: 0.5
+      value: 0.5,
+      tweets: []
     }
     this.updateIndex = this.updateIndex.bind(this)
+    this.getTweets();
   }
+
+  getTweets() {
+    return fetch('https://alejandroledesma-heroku.herokuapp.com/api/statuses/user_timeline')
+      .then(response => response.json())
+      .then(responseJson => {
+        this.setState({tweets: responseJson});
+      })
+      .catch(error => console.error(error));
+  }
+
 
   updateIndex (selectedIndex) {
     this.setState({selectedIndex})
   }
 
   render () {
-    const buttons = ['Button1', 'Button2']
+    const buttons = ['Button1', 'Button2'];
     const { selectedIndex } = this.state
     return (
       <ScrollView style={{backgroundColor: 'white'}}>
@@ -82,14 +66,14 @@ class About extends Component {
           <Card
             title='CARD WITH DIVIDER'>
             {
-              users.map((u, i) => {
+              this.state.tweets.map((u, i) => {
                 return (
                   <View key={i} style={styles.user}>
                     <Image
                       style={styles.image}
                       resizeMode='cover'
-                      source={{uri: u.avatar}} />
-                    <Text style={styles.name}>{u.name}</Text>
+                      source={{uri: u.user.avatar}} />
+                    <Text style={styles.name}>{u.user.username}</Text>
                   </View>
                 )
               })
