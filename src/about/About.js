@@ -51,34 +51,33 @@ class About extends Component {
     const { selectedIndex } = this.state
     return (
       <ScrollView style={{backgroundColor: 'white'}}>
-        <View style={styles.headerContainer}>
-          <Icon color='white' name='invert-colors' size={62} />
-          <Text style={styles.heading}>Components</Text>
-        </View>
-        <View style={{marginTop: 20}}>
-          <ButtonGroup
-            textStyle={{fontSize: 13}}
-            onPress={this.updateIndex}
-            selectedIndex={selectedIndex}
-            buttons={buttons} />
-        </View>
         <View style={styles.container}>
-          <Card
-            title='CARD WITH DIVIDER'>
             {
               this.state.tweets.map((u, i) => {
+                console.log(u.user.avatar);
                 return (
-                  <View key={i} style={styles.user}>
-                    <Image
-                      style={styles.image}
-                      resizeMode='cover'
-                      source={{uri: u.user.avatar}} />
-                    <Text style={styles.name}>{u.user.username}</Text>
-                  </View>
+                   <Card key={i}>
+                    <Grid containerStyle={{flex: 1, justifyContent: 'center', alignItems: 'center', alignSelf: 'center', padding: 5}}>
+                      <Col size={0.25}>
+                        <TouchableHighlight onPress={() => console.log("hello")}>
+                          <Image source={{uri: u.user.avatar.replace('http:', 'https:')}} style={{height: 35, width: 35, borderRadius: 15}}/>
+                        </TouchableHighlight>
+                      </Col>
+                      <Col>
+                        <Row size={0.75}>
+                          <Text style={{fontSize: 22}}>{u.user.username}</Text>
+                        </Row>
+                        <Row>
+                          <Text style={{color: 'grey'}}>Freelance developer</Text>
+                        </Row>
+                      </Col>
+                    </Grid>
+                  </Card>
                 )
               })
             }
-          </Card>
+        </View>
+        {/*<View>
           <Card containerStyle={{marginTop: 15}} title='FONTS'>
             <Text style={styles.fonts} h1>h1 Heading</Text>
             <Text style={styles.fonts} h2>h2 Heading</Text>
@@ -453,7 +452,7 @@ class About extends Component {
               </Row>
             </Grid>
           </Card>
-        </View>
+        </View>*/}
       </ScrollView>
     )
   }
@@ -461,26 +460,15 @@ class About extends Component {
 
 styles = StyleSheet.create({
   container: {
-    flex: 1
-  },
-  headerContainer: {
-    marginTop: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 40,
-    backgroundColor: colors.primary
-  },
-  heading: {
-    color: 'white',
-    marginTop: 10,
-    fontSize: 22
+    flex: 1,
+    marginTop: 80
   },
   fonts: {
     marginBottom: 8
   },
   user: {
     flexDirection: 'row',
-    marginBottom: 6
+    marginBottom: 22
   },
   image: {
     width: 30,
