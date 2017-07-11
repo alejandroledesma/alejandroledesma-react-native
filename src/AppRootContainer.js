@@ -6,6 +6,7 @@ import {
   ListItem,
   SideMenu
 } from 'react-native-elements'
+import Splash from './Splash';
 
 class AppRootContainer extends Component {
   constructor () {

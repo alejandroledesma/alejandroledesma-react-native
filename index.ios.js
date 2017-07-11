@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppRegistry } from 'react-native'
-import AppRootContainer from './src/AppRootContainer'
+import AppRootContainer from './src/AppRootContainer';
 
 const AlejandroLedesmaApp = () => (
   <AppRootContainer />
